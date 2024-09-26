@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 // const fetch = require('node-fetch');
 
-function getTask(req, res) {
+export function getTask(req, res) {
 
     const ASANA_URL = process.env.ASANA_BASE_URL;
     var token = process.env.ASANA_TOKEN;
@@ -29,6 +29,3 @@ function getTask(req, res) {
         (err => console.log(err))
     }
 }
-
-
-module.exports = { getTask }

@@ -1,10 +1,15 @@
-const express = require('express');
+import express from 'express';
+import cors from "cors";
+import dotenv from "dotenv";
+
+import projects from "./projects/index.js";
+import tasks from "./tasks/index.js";
+
+
 const app = express();
-const cors = require('cors');
 const PORT = 5000;
-const projects = require("./projects/index");
-const tasks = require("./tasks/index");
-require("dotenv").config(); //load env
+
+dotenv.config(); //load env
 // const AWS = require('aws-sdk');
 
 // AWS.config.update({
